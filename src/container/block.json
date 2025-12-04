@@ -1,9 +1,9 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "wolf/section",
+	"name": "wolf/container",
 	"version": "0.1.0",
-	"title": "Section",
+	"title": "Container",
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
@@ -17,25 +17,13 @@
 	"style": "file:./style-index.css",
 	"viewScript": "file:./view.js",
 	"attributes": {
-		"headingTitle": {
+		"topStyle": {
 			"type": "string",
-			"default": "Section Heading"
+			"default": "none"
 		},
-		"headingSubtitle": {
+		"bottomStyle": {
 			"type": "string",
-			"default": "This is a subtitle"
-		},
-		"headingAlign": {
-			"type": "string",
-			"default": "center"
-		},
-		"headingTitleColor": {
-			"type": "string",
-			"default": "#000000"
-		},
-		"headingSubtitleColor": {
-			"type": "string",
-			"default": "#666666"
+			"default": "none"
 		}
 	}
 }

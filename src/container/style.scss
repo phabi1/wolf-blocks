@@ -1,0 +1,35 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-wolf-container {
+	.wp-block-wolf-container-top,
+	.wp-block-wolf-container-bottom {
+		height: 50px;
+	}
+
+	.wolf-blocks-container-content {
+		padding: 20px;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	@media screen and (min-width: 768px) {
+		.wolf-blocks-container-content {
+			max-width: 750px;
+		}
+	}
+	@media screen and (min-width: 992px) {
+		.wolf-blocks-container-content {
+			max-width: 970px;
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		.wolf-blocks-container-content {
+			max-width: 1170px;
+		}
+	}
+}

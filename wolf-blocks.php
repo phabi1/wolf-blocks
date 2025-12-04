@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Section
+ * Plugin Name:       Wolf blocks
  * Description:       Example block scaffolded with Create Block tool.
  * Version:           0.1.0
  * Requires at least: 6.7
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://make.wordpress.org/core/2025/03/13/more-efficient-block-type-registration-in-6-8/
  * @see https://make.wordpress.org/core/2024/10/17/new-block-type-registration-apis-to-improve-performance-in-wordpress-6-7/
  */
-function wolf_section_block_init() {
+function wolf_blocks_block_init() {
 	/**
 	 * Registers the block(s) metadata from the `blocks-manifest.php` and registers the block type(s)
 	 * based on the registered block metadata.
@@ -56,4 +56,4 @@ function wolf_section_block_init() {
 		register_block_type( __DIR__ . "/build/{$block_type}" );
 	}
 }
-add_action( 'init', 'wolf_section_block_init' );
+add_action( 'init', 'wolf_blocks_block_init' );

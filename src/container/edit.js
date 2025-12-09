@@ -16,7 +16,7 @@ import {
 	InnerBlocks,
 	InspectorControls,
 } from "@wordpress/block-editor";
-import { PanelBody, SelectControl } from "@wordpress/components";
+import { Panel, PanelBody, SelectControl } from "@wordpress/components";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -50,12 +50,51 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(newTopStyle) => setAttributes({ topStyle: newTopStyle })}
 					/>
 				</PanelBody>
+				<PanelBody title={__("Content Style", "wolf")}>
+					<SelectControl
+						label={__("Select Content Background Color", "wolf")}
+						value={attributes.contentBgColor}
+						options={[
+							{ label: "Default", value: "default" },
+							{ label: "Gray", value: "gray-background" },
+							{ label: "Red", value: "red-background" },
+						]}
+						onChange={(newContentBgColor) =>
+							setAttributes({ contentBgColor: newContentBgColor })
+						}
+					/>
+					<SelectControl
+						label={__("Select Content Text Color", "wolf")}
+						value={attributes.contentTextColor}
+						options={[
+							{ label: "Default", value: "default" },
+							{ label: "White", value: "white-text" },
+							{ label: "Black", value: "black-text" },
+						]}
+						onChange={(newContentTextColor) =>
+							setAttributes({ contentTextColor: newContentTextColor })
+						}
+					/>
+					<SelectControl
+						label={__("Select Content Style", "wolf")}
+						value={attributes.contentStyle}
+						options={[
+							{ label: "None", value: "none" },
+							{ label: "Background 1", value: "background-1" },
+						]}
+						onChange={(newContentStyle) =>
+							setAttributes({ contentStyle: newContentStyle })
+						}
+					/>
+				</PanelBody>
 				<PanelBody title={__("Bottom Style", "wolf")}>
 					<SelectControl
 						label={__("Select Bottom Style", "wolf")}
 						value={attributes.bottomStyle}
 						options={[
 							{ label: "None", value: "none" },
+							{ label: "White Wave 1", value: "white-wave-1" },
+							{ label: "White Wave 2", value: "white-wave-2" },
 							{ label: "Black Wave 1", value: "black-wave-1" },
 						]}
 						onChange={(newBottomStyle) =>

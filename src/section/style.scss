@@ -5,8 +5,32 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+$section-header-primary-size: 4rem;
+$section-header-primary-weight: 400;
+$section-header-primary-font: "Anton", Arial, Helvetica, sans-serif;
+$section-header-secondary-size: 2rem;
+$section-header-secondary-weight: 300;
+$section-header-secondary-font: "Rock Salt", Arial, Helvetica, sans-serif;
+$section-header-color: #666;
+
+
 .wp-block-wolf-section {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	header {
+		/* Example style for the header element */
+		margin-bottom: 1.5rem;
+		text-align: center;
+
+		h2 {
+			font-size: $section-header-primary-size;
+			font-weight: $section-header-primary-weight;
+			font-family: $section-header-primary-font;
+		}
+
+		h3 {
+			font-size: $section-header-secondary-size;
+			font-weight: $section-header-secondary-weight;
+			font-family: $section-header-secondary-font;
+			color: $section-header-color;
+		}
+	}
 }

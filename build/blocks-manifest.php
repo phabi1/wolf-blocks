@@ -29,6 +29,18 @@ return array(
 			'bottomStyle' => array(
 				'type' => 'string',
 				'default' => 'none'
+			),
+			'contentBgColor' => array(
+				'type' => 'string',
+				'default' => 'default'
+			),
+			'contentTextColor' => array(
+				'type' => 'string',
+				'default' => 'default'
+			),
+			'contentStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
 			)
 		)
 	),

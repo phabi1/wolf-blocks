@@ -7,10 +7,21 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-wolf-section {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
+.wp-block-wolf-section header {
+  /* Example style for the header element */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.wp-block-wolf-section header h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: "Anton", Arial, Helvetica, sans-serif;
+}
+.wp-block-wolf-section header h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Rock Salt", Arial, Helvetica, sans-serif;
+  color: #666;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

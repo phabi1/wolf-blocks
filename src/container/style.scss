@@ -6,9 +6,49 @@
  */
 
 .wp-block-wolf-container {
-	.wp-block-wolf-container-top,
-	.wp-block-wolf-container-bottom {
-		height: 50px;
+	&.bg-red-background {
+		background-color: #F41E1E;
+	}
+	&.bg-gray-background {
+		background-color: #222222;
+	}
+
+	.wolf-blocks-container-top,
+	.wolf-blocks-container-bottom {
+		width: 100%;
+		background-repeat: no-repeat;
+	}
+
+	.wolf-blocks-container-top {
+		background-position: top center;
+		background-size: cover;
+
+		&.white-wave-1 {
+			background-image: url("../../assets/images/backgrounds/white_top_wave_02.avif");
+			aspect-ratio: 1920 /130;
+		}
+		&.white-wave-2 {
+			background-image: url("../../assets/images/backgrounds/white_top_wave_03.avif");
+			aspect-ratio: 1920 /160;
+		}
+	}
+
+	.wolf-blocks-container-bottom {
+		background-position: bottom center;
+		background-size: cover;
+
+		&.white-wave-1 {
+			background-image: url("../../assets/images/backgrounds/white_bottom_wave_02.avif");
+			aspect-ratio: 1920 /165;
+		}
+		&.white-wave-2 {
+			background-image: url("../../assets/images/backgrounds/white_bottom_wave_03.avif");
+			aspect-ratio: 1920 /120;
+		}
+		&.black-wave-1 {
+			background-image: url("../../assets/images/backgrounds/black_bottom_wave_02.avif");
+			aspect-ratio: 1920 /130;
+		}
 	}
 
 	.wolf-blocks-container-content {

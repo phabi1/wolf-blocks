@@ -24,6 +24,18 @@
 		"bottomStyle": {
 			"type": "string",
 			"default": "none"
+		},
+		"contentBgColor": {
+			"type": "string",
+			"default": "default"
+		},
+		"contentTextColor": {
+			"type": "string",
+			"default": "default"
+		},
+		"contentStyle": {
+			"type": "string",
+			"default": "none"
 		}
 	}
 }

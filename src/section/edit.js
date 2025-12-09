@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from "@wordpress/i18n";
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks, RichText } from "@wordpress/block-editor";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -19,7 +19,7 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import './editor.scss';
+import "./editor.scss";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -29,10 +29,26 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Section – hello from the editor!', 'wolf' ) }
-		</p>
+		<section {...useBlockProps()}>
+			<header>
+				<h2>
+					<RichText
+						value={attributes.headingTitle}
+						onChange={(headingTitle) => setAttributes({ headingTitle })}
+					/>
+				</h2>
+				<h3>
+					<RichText
+						value={attributes.headingSubtitle}
+						onChange={(headingSubtitle) => setAttributes({ headingSubtitle })}
+					/>
+				</h3>
+			</header>
+			<div>
+				<InnerBlocks />
+			</div>
+		</section>
 	);
 }

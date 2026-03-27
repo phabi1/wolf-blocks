@@ -1,0 +1,59 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-wolf-blocks-container {
+  position: relative;
+
+  .wolf-blocks-container-top,
+  .wolf-blocks-container-bottom {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+
+    &.floating {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .wolf-blocks-container-top {
+
+    &.floating {
+      top: 0;
+    }
+
+    &.white-wave-1 {
+      background-image: url("../../assets/images/waves/white_top_wave_02.avif");
+      aspect-ratio: 1920 /130;
+    }
+    &.white-wave-2 {
+      background-image: url("../../assets/images/waves/white_top_wave_03.avif");
+      aspect-ratio: 1920 /160;
+    }
+  }
+
+  .wolf-blocks-container-bottom {
+
+    &.floating {
+      bottom: 0;
+    }
+
+    &.white-wave-1 {
+      background-image: url("../../assets/images/waves/white_bottom_wave_02.avif");
+      aspect-ratio: 1920 /165;
+    }
+    &.white-wave-2 {
+      background-image: url("../../assets/images/waves/white_bottom_wave_03.avif");
+      aspect-ratio: 1920 /120;
+    }
+    &.black-wave-1 {
+      background-image: url("../../assets/images/waves/black_bottom_wave_02.avif");
+      aspect-ratio: 1920 /130;
+    }
+  }
+}
